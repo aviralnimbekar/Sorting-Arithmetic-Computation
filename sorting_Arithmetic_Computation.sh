@@ -27,7 +27,7 @@ for ((i=1; i<=$((${#arr_Sum[@]} - 1)); i++))
 do
 	for ((j=$((i + 1)); j<=${#arr_Sum[@]} ; j++))
 	do
-		if [[ ${arr_Sum[$i]} -lt ${arr_Sum[$j]} ]]
+		if [[ ${arr_Sum[$i]} -gt ${arr_Sum[$j]} ]]
        		then
                		tmp=${arr_Sum[$i]}
                		arr_Sum[$i]=${arr_Sum[$j]}
