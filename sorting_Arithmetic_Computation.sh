@@ -10,3 +10,10 @@ A=$(($a + $b * $c))
 B=$(($a * $b + $c))
 C=$(($c + $a / $b))
 D=$(($a % $b + $c))
+
+declare -A resulted_Sum 
+
+resulted_Sum[A]=$A
+resulted_Sum[B]=$B
+resulted_Sum[C]=$C
+resulted_Sum[D]=$D
