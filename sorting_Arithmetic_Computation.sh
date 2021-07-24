@@ -12,8 +12,14 @@ C=$(($c + $a / $b))
 D=$(($a % $b + $c))
 
 declare -A resulted_Sum 
+resulted_Sum[1]=$A
+resulted_Sum[2]=$B
+resulted_Sum[3]=$C
+resulted_Sum[4]=$D
 
-resulted_Sum[A]=$A
-resulted_Sum[B]=$B
-resulted_Sum[C]=$C
-resulted_Sum[D]=$D
+declare -a arr_Sum
+for ((i=1; i<5; i++))
+do
+arr_Sum[$i]=${resulted_Sum[$i]}
+done
+
