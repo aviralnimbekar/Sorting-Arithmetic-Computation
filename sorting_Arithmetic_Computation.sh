@@ -20,6 +20,20 @@ resulted_Sum[4]=$D
 declare -a arr_Sum
 for ((i=1; i<5; i++))
 do
-arr_Sum[$i]=${resulted_Sum[$i]}
+	arr_Sum[$i]=${resulted_Sum[$i]}
 done
 
+for ((i=1; i<=$((${#arr_Sum[@]} - 1)); i++))
+do
+	for ((j=$((i + 1)); j<=${#arr_Sum[@]} ; j++))
+	do
+		if [[ ${arr_Sum[$i]} -lt ${arr_Sum[$j]} ]]
+       		then
+               		tmp=${arr_Sum[$i]}
+               		arr_Sum[$i]=${arr_Sum[$j]}
+               		arr_Sum[$j]=$tmp         
+       		fi
+      	done
+done
+
+echo "${arr_Sum[@]}"
