@@ -20,6 +20,6 @@ resulted_Sum[4]=$D
 declare -a arr_Sum
 for ((i=1; i<5; i++))
 do
-arr_Sum[$i]=${resulted_Sum[$i]}
+	arr_Sum[$i]=${resulted_Sum[$i]}
 done
 
